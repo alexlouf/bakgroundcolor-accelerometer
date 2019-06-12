@@ -39,15 +39,15 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         }
 
 
-        textView.text = "Axe x : " + axisx.toString()
-        textView2.text = "Axe y : " + axisy.toString()
-        textView3.text = "Axe z : " + axisz.toString()
 
         val hex = String.format("#%02x%02x%02x", axisx, axisy, axisz)
 
         textView4.text = "Hexa : " + hex
+        textView.text = "Axe x : " + axisx.toString()
+        textView2.text = "Axe y : " + axisy.toString()
+        textView3.text = "Axe z : " + axisz.toString()
 
-        if (hex.length === 7) {
+        if (hex.length == 7) {
             background.setBackgroundColor(Color.parseColor(hex))
         }
     }
